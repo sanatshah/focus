@@ -1,0 +1,11 @@
+
+h2, p {
+  display: inline;
+  margin-left: 10%;
+}
+
+
+body {
+  width: 200px;
+  height: 100px;
+}
