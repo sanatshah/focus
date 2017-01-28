@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+
+  "name": "focus",
+  "description": "AI extension that make sure's you are keeping focus",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "main.html"
+  },
+  "permissions": [
+  ]
+}
