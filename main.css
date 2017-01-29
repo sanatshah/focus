@@ -1,11 +1,52 @@
 
 h2, p {
   display: inline;
-  margin-left: 10%;
+}
+
+.topicButton {
+  float: left;
+  margin-top: -2px;
+  margin-bottom: 6px;
+  width: 200px;
+  background-color: rgba(22,84,109,0.64); /* Green */
+  border: none;
+  color: white;
+  padding: 4px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  box-sizing:border-box;
+}
+
+.topicButton:hover {
+  margin-top: -2px;
+  margin-bottom: 6px;
+  width: 200px;
+  background-color: rgba(9, 73, 99, 0.83); /* Green */
+  border: none;
+  color: white;
+  padding: 4px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px
+}
+
+
+
+.topicInput{
+  margin-top: 15px;
+  width: 100%;
+   padding: 3px 7px;
+   margin: 13px 0;
+   box-sizing: border-box;
 }
 
 
 body {
   width: 200px;
   height: 100px;
+  background-color: #f3f3f3;
+  font-family: "Lucida Console", Monaco, monospace;
 }

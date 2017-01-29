@@ -1,1 +1,1 @@
-chrome.runtime.sendMessage("hello");
+//chrome.runtime.sendMessage("hello");
