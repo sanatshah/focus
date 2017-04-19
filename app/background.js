@@ -9,9 +9,9 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
     chrome.storage.sync.get(TOPIC, function(obj){
 
       if(obj != null)
-        chrome.runtime.sendMessage({msg: "checkTopic", topic: obj.topic});
+        chrome.runtime.sendMessage({msg: "checkTopicRes", topic: obj.topic});
       else
-        chrome.runtime.sendMessage({msg: "checkTopic", topic: "no topic"});
+        chrome.runtime.sendMessage({msg: "checkTopicRes", topic: "no topic"});
 
     });
   }else if (response.request == SET_TOPIC){

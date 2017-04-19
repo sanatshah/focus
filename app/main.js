@@ -18,6 +18,6 @@ function setTopic(inputTopic){
 
 
 chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
-  if (response.msg = "checkTopic")
+  if (response.msg = "checkTopicRes")
       document.getElementById("topicText").value = response.topic;
 });

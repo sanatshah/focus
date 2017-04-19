@@ -6,15 +6,15 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_popup": "main.html"
+    "default_popup": "app/main.html"
   },
   "background": {
-    "scripts" : ["background.js"]
+    "scripts" : ["app/background.js", "/processor/nlp.js"]
   },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["pageScript.js"]
+      "js": ["app/pageScript.js", "libs/compromise.min.js"]
     }
   ],
   "permissions": [
