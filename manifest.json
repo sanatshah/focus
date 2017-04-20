@@ -9,12 +9,12 @@
     "default_popup": "app/main.html"
   },
   "background": {
-    "scripts" : ["app/background.js", "/processor/nlp.js"]
+    "scripts" : ["app/background.js", "/processor/nlp.js", "libs/compromise.min.js", "libs/synaptic.js"]
   },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["app/pageScript.js", "libs/compromise.min.js"]
+      "js": ["app/pageScript.js"]
     }
   ],
   "permissions": [
