@@ -6,7 +6,7 @@ const SET_TOPIC = "setTopic";
 chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
 
   if (response.request == CHECK_TOPIC){
-    chrome.storage.sync.get(TOPIC, function(obj){
+    chrome.storage.sync.get('topic', function(obj){
 
       if(obj != null)
         chrome.runtime.sendMessage({msg: "checkTopicRes", topic: obj.topic});
@@ -15,18 +15,11 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
 
     });
   }else if (response.request == SET_TOPIC){
-    chrome.storage.sync.remove(TOPIC);
-
-    var obj={};
-    obj[TOPIC] = response.topic;
-    chrome.storage.sync.set(obj);
+    chrome.storage.sync.remove('topic');
+    chrome.storage.sync.set({'topic': response.topic}, function() {
+      sendResponse({value: "Topic updated."});
+    });
   }
 
-});
-
-
-chrome.windows.onFocusChanged.addListener(function(){
-
-
-
+  return true;
 });

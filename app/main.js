@@ -11,11 +11,13 @@ document.getElementById("topicClicked").onclick = function() {
 function setTopic(inputTopic){
   chrome.runtime.sendMessage({request: "setTopic", topic: inputTopic},
     function (response){
+      console.log(response.value);
       document.getElementById("topicText").value = inputTopic;
     }
   );
 }
 
+chrome.runtime.sendMessage({request: "checkTopic"})
 
 chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
   if (response.msg = "checkTopicRes")

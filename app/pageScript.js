@@ -38,6 +38,7 @@
     allText.h2.push(h2[i].innerHTML);
   }
 
+  console.log("sending to nlp")
   //send to nlp
   chrome.runtime.sendMessage({request: "getTopicProbability", value: allText},
     function (response){
